@@ -1,0 +1,41 @@
+  .background {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Use the full height of the viewport */
+  }
+  
+  #quote-box {
+    width: 500px;
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.600);
+  }
+  
+  .quote-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #author {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  
+  #tweet-quote, #new-quote {
+    margin: 5px;
+  }
+  
+  
