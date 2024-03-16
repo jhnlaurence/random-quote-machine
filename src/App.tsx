@@ -26,6 +26,7 @@ const colorGenerator = (): string => {
 function App() {
   const [quote, setQuote] = useState<Quote>(quoteGenerator());
   const [randomColor, setRandomColor] = useState<string>(colorGenerator());
+  
 
   const newQuote = () => {
     setQuote(quoteGenerator());
@@ -39,31 +40,30 @@ function App() {
 
   return (
     <>
-      <div className="background" style={{backgroundColor: randomColor}}>
+      <div className="background " style={{backgroundColor: randomColor}}>
         <div id="quote-box">
 
           <div className="quote-content">
-            <h2 id="text">
-              <FaQuoteLeft size="30"/> 
+            <h2 id="text" style={{color: randomColor, textAlign:"center"}}>
+              <FaQuoteLeft size="25" style={{marginRight: 10}}/>
                 {quote.quote}
             </h2>
 
-            <h5 id="author"> - {quote.author}</h5>
+            <h6 id="author" style={{color: randomColor}}> - {quote.author}</h6>
           </div>
           
           <div className="buttons">
 
-            <a href={tweetUrl()} target="_blank" id="tweet-quote"
-              style={{backgroundColor: "black", paddingRight:"15px", paddingLeft: "15px", paddingBottom:"5px"}}>
+            <a href={tweetUrl()} target="_blank" id="tweet-quote" className="newTweet"
+              style={{backgroundColor: randomColor, paddingRight:"15px", paddingLeft: "15px"}}>
               <FaTwitter style={{color:"white"}}/>
             </a>
 
-            <button onClick={newQuote} id="new-quote">
+            <button onClick={newQuote} id="new-quote" className="newQuote" style={{backgroundColor: randomColor, border:0}}>
               New Quote
             </button>
             
           </div>
-
         </div>
       </div>
     </>

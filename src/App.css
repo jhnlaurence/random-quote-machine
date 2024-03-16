@@ -9,7 +9,7 @@
   #quote-box {
     width: 500px;
     margin: 0 auto;
-    min-height: 300px;
+    min-height: 200px;
     display: flex;
     justify-content: space-between; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -33,9 +33,37 @@
     margin-bottom: 20px;
     text-align: right;
   }
-  
-  #tweet-quote, #new-quote {
-    margin: 5px;
+
+  /* #text {
+    display: inline-flex;
+    align-items: center;
+  } */
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  
-  
+
+ .newTweet{
+    order:1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .newQuote{
+    order: 2;
+    border-radius: 5px;
+    border: 0;
+    padding: 12px;
+    font-size: 12px;
+    color: white;
+  }
+
+  .newQuote:focus{
+    outline:0;
+  }
